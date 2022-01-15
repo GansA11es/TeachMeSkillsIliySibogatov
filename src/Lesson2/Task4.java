@@ -86,5 +86,4 @@ public class Task4 {
         a33 = b5 >>>= 1;
         System.out.println("Присвонение значение \">>>= b5\" : a33 = " + a33);
     }
-
 }

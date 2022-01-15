@@ -3,28 +3,31 @@ package Lesson2;
 import java.util.Scanner;
 public class Task1 {
 
-    byte a;
-    short b;
-    int c;
+    public static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        Scanner d = new Scanner(System.in);
-        Scanner e = new Scanner(System.in);
-        Scanner f = new Scanner(System.in);
-
-        System.out.print("Введите допустимое значение byte = ");
-        byte a = d.nextByte();
-        System.out.print("Введите допустимое значение short = ");
-        short b = e.nextShort();
-        System.out.print("Введите допустимое значение int = ");
-        int c = f.nextInt();
-
+        byte a;
+        short b;
+        int c;
         int minimum = 0;
         int middle = 0;
         int maximum = 0;
-        if (a == b && b == c) {System.out.println("Все три числа равны");
-            minimum = a; middle = a; maximum = a;}
+
+        System.out.print("Введите допустимое значение byte = ");
+        a = SCANNER.nextByte();
+        System.out.print("Введите допустимое значение short = ");
+        b = SCANNER.nextShort();
+        System.out.print("Введите допустимое значение int = ");
+        c = SCANNER.nextInt();
+
+
+        if (a == b && b == c) {
+            System.out.println("Все три числа равны");
+            minimum = a;
+            middle = a;
+            maximum = a;
+        }
         else if (a>b && b>c) {minimum = c; middle = b; maximum = a;}
         else if (a>c && c>b) {minimum = b; middle = c; maximum = a;}
         else if (b>a && a>c) {minimum = c; middle = a; maximum = b;}

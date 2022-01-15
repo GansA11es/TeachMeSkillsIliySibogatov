@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Task3 {
 
-    int a; // количество столбцов
-    int b; // количество строк
-    static String name;
-
     public static void main(String [] args) {
 
         String name = "O";
@@ -15,21 +11,20 @@ public class Task3 {
         Scanner s = new Scanner(System.in);
         Scanner d = new Scanner(System.in);
 
+        int a; // количество столбцов
+        int b;// количество строк
         System.out.print("Введите количество строк = ");
-        int a = s.nextInt();
+        a = s.nextInt();
 
         System.out.print("Введите количество столбцов = ");
-        int b = d.nextInt();
+        b = d.nextInt();
 
-        String [][] matrice = new String[a][b];
-
-        for (a = 0; a< matrice.length; a++){
-            for (b = 0; b< matrice[a].length; b++){
+        for (int i = 0; i < a; i++){
+            for (int j = 0; j < b; j++){
                 System.out.print(name + " ");
             }
             System.out.println();
         }
         System.out.println("Построенние массива закончено");
     }
-
 }
